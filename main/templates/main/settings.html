@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %} 
+{% block title %}Evaluation{% endblock %} 
+{% load static %} 
+{% block style %}{% static 'css/settings.css' %}{% endblock %} 
+{% block content %}
+    <div class="functions">
+      <a href="#">
+        <div class="func-button">
+          Set Evaluation Period
+        </div>
+      </a>
+      <a href="/sign-up">
+        <div class="func-button">
+          Register Users
+        </div>
+      </a>
+    </div>
+{% endblock %}

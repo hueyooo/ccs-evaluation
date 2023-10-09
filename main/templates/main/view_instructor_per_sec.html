@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %} 
+{% block title %}Evaluation{% endblock %} 
+{% load static %} 
+{% block style %}{% static 'css/evaluation.css' %}{% endblock %} 
+{% block content %}
+  <ul>
+    <div class="title">Instructors' Charts/{{ section }}</div>
+    {% for inst in instructor %}
+      <a
+        href="{% url 'view_instructor_chart_id' section=section id=inst.inst.user.id %}"
+      >
+        <li>
+        <img src="{{ inst.inst.user.image.url }}" />
+        <h3>{{ inst.inst }}</h3>
+        <p>{{ inst.subj }}</p>
+        </li>
+      </a>
+    {% endfor %}
+    <a href="/evaluation/view/instructor-chart">
+      <div class="func-button">
+        Go back 
+      </div>
+    </a>
+  </ul>
+{% endblock %}

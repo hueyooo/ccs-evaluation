@@ -1,0 +1,53 @@
+form {
+  width: 430px;
+  border: 2px solid #ccc;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  font-family: montserrat;
+}
+
+form label, .title {
+  color: #3c3c3c;
+  font-size: 18px;
+  padding: 10px;
+}
+
+form input, form select {
+  font-family: montserrat;
+  display: block;
+  border: 2px solid #ccc;
+  width: 95%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.input-group, .input-group a{
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.input-group a{
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+button, .back-button{
+  float: right;
+  background: #61c0d3;
+  font-family: montserrat;
+  padding: 10px 15px;
+  color: #0a0a0a;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: none;
+  font-size: 13px;
+}
+
+button:hover, .back-button:hover{
+  opacity: 0.7;
+  transition: 0.15s;
+  cursor: pointer;
+}

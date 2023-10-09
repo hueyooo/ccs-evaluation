@@ -1,0 +1,69 @@
+.content ul {
+  list-style-type: none;
+  width: 1000px;
+  margin: auto;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.content li img {
+  float: left;
+  margin: 0 15px 0 0;
+  width: 50px;
+  border-radius: 50px;
+}
+
+.content li p {
+  font: 200 12px/1.5 montserrat;
+}
+
+.content li {
+  padding: 10px;
+  overflow: auto;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.content li span {
+  display: block;
+  float: right;
+}
+
+.content li span.green {
+  color: green;
+}
+
+.content li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+/* Admin or Dean Style */
+
+.content ul .title {
+  margin-right: auto;
+  margin-bottom: 10px;
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.functions {
+  width: 1000px;
+  margin: auto;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.func-button {
+  padding: 10px;
+  overflow: auto;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.func-button:hover {
+  background: #eee;
+}

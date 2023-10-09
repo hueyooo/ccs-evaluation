@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %} 
+{% block title %}Evaluation{% endblock %} 
+{% load static %} 
+{% block style %}{% static 'css/evaluation.css' %}{% endblock %} 
+{% block content %}
+    <div class="functions">
+      <a href="/evaluation/edit_questionnaire">
+        <div class="func-button">
+          Edit Questionnaire
+        </div>
+      </a>
+      <a href="/evaluation/view">
+        <div class="func-button">
+          View Responses
+        </div>
+      </a>
+      <a href="/evaluation/edit-instructor">
+        <div class="func-button">
+          Add/Remove Instructor
+        </div>
+      </a>
+      {% if user.role == 'Instructor' %}
+      <a href="/evaluation/dean">
+        <div class="func-button">
+          Evaluate
+        </div>
+      </a>  
+      {% endif %}
+    </div>
+{% endblock %}

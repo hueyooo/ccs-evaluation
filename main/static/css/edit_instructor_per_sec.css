@@ -1,0 +1,74 @@
+.content ul {
+  list-style-type: none;
+  width: 1000px;
+  margin: auto;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.content li img,
+.func-button img{
+  float: left;
+  margin: 0 15px 0 0;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.content li p {
+  font: 200 12px/1.5 montserrat;
+}
+
+.func-button h3 {
+  padding: 10px 0;
+}
+
+.content li {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  overflow: auto;
+  background: #fff;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.content li .function {
+  display: block;
+  margin-left: auto;
+}
+
+.content ul .title {
+  margin-right: auto;
+  margin-bottom: 10px;
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.func-button {
+  padding: 10px;
+  overflow: auto;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.func-button:hover {
+  background: #eee;
+}
+
+.green, .red {
+  font-size: 18px;
+}
+
+.green {
+  color: rgb(20, 161, 20);
+}
+
+.red {
+  color: red;
+}
+
+.green:hover, .red:hover {
+  text-decoration: underline;
+}

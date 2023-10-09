@@ -1,0 +1,74 @@
+.container {
+  width: 1000px;
+  margin: auto;
+  background: #f4f4f4;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title, .instructor, .subject {
+  margin-right: auto;
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.instructor {
+  font-size: 18px;
+}
+
+.subject {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+table {
+  font-family: montserrat;
+  width: 100%;
+  border: 3px solid #000;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th, td {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #000;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+th {
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  background-color: #e0dfdf;
+}
+
+td {
+  background-color: white;
+}
+
+.score {
+  text-align: center;
+  border-left: 1px solid black;
+}
+
+.back-button {
+  float: right;
+  background: #61c0d3;
+  font-family: montserrat;
+  padding: 10px 15px;
+  color: #0a0a0a;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: none;
+  font-size: 13px;
+}
+
+.back-button:hover {
+  opacity: 0.7;
+  transition: 0.15s;
+  cursor: pointer;
+} 

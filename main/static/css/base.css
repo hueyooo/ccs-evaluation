@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  align-items: center;
+  background-color: #61c0d3;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 50px;
+  z-index: 100;
+}
+
+.logo,
+.nav-links,
+.notif-button,
+.settings-button,
+.profile {
+  display: inline-block;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.header img {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+li,
+a,
+p {
+  font-family: montserrat;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 20px;
+}
+
+.nav-links li a,
+.profile-box li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-buttons li a:hover,
+.profile-box li a:hover {
+  color: white;
+}
+
+.notification {
+  position: relative;
+}
+
+.notif-box {
+  position: absolute;
+  background-color: lightgray;
+  height: 500px;
+  width: 300px;
+  top: 64px;
+  right: 13px;
+  padding: 20px 20px 0px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 10;
+}
+
+.notif-box::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  right: 2px;
+  border: 10px solid;
+  border-color: transparent transparent lightgray transparent;
+}
+
+.notification.active .notif-box {
+  display: block;
+}
+
+.settings-button img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile-box {
+  position: absolute;
+  background-color: lightgray;
+  height: 130px;
+  width: 200px;
+  top: 64px;
+  right: 13px;
+  padding: 0 10px;
+  border-radius: 5px;
+  display: none;
+  z-index: 10;
+}
+
+.profile-box::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  right: 2px;
+  border: 10px solid;
+  border-color: transparent transparent lightgray transparent;
+}
+
+.profile-box li {
+  display: block;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 300;
+  padding: 5px 0;
+}
+
+.profile-box h1 {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+.profile.active .profile-box {
+  display: block;
+}
+
+.content {
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  padding: 30px 15%;
+  z-index: 1;
+}

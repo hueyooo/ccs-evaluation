@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %} 
+{% block title %}View Responses{% endblock %} 
+{% load static %} 
+{% block style %}{% static 'css/evaluation.css' %}{% endblock %} 
+{% block content %}
+    <div class="functions">
+      <a href="/evaluation/view/completion-chart">
+        <div class="func-button">
+          View Detailed Completion Chart
+        </div>
+      </a>
+      <a href="/evaluation/view/instructor-chart">
+        <div class="func-button">
+          View Instructors' Charts
+        </div>
+      </a>
+      <a href="/evaluation">
+        <div class="func-button">
+          Go back to Evaluation Home
+        </div>
+      </a>
+    </div>
+{% endblock %}

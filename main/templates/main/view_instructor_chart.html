@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %} 
+{% block title %}View Instructors' Charts{% endblock %} 
+{% load static %} 
+{% block style %}{% static 'css/chart.css' %}{% endblock %}
+{% block content %}
+  <div class="functions">
+    <div class="title">Instructors' Charts</div>
+    <hr size="2px" width="100%" color="gray"/>
+    <div class="course">Information Technology</div>
+    <hr size="2px" width="100%" color="gray"/>
+    <div class="bsit">
+      <div class="column">
+        <div class="row">
+          {% for sec in section %} 
+            {% if "IT" in sec %}
+              <a href="{% url 'view_instructor_chart_per_section' section=sec %}">
+                <div class="func-button">
+                  <span> {{ sec }} </span>
+                </div>
+              </a>
+            {% endif %} 
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <hr size="2px" width="100%" color="gray"/>
+    <div class="course">Information System/Computer Science/Associate in Computer Technology</div>
+    <hr size="2px" width="100%" color="gray"/>
+    <div class="bsis-bscs-act">
+      <div class="column">
+        <div class="row">
+          {% for sec in section %} 
+            {% if "IS" in sec %}
+              <a href="{% url 'view_instructor_chart_per_section' section=sec %}">
+                <div class="func-button">
+                  <span> {{ sec }} </span>
+                </div>
+              </a>
+            {% elif "IS" in sec %}
+              <a href="{% url 'view_instructor_chart_per_section' section=sec %}">
+                <div class="func-button">
+                  <span> {{ sec }} </span>
+                </div>
+              </a>
+            {% elif "ACT" in sec %}
+              <a href="{% url 'view_instructor_chart_per_section' section=sec %}">
+                <div class="func-button">
+                  <span> {{ sec }} </span>
+                </div>
+              </a>
+            {% endif %} 
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <a class="back-button" href="/evaluation/view">Back</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% block style %} {% endblock %}" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".notification .notif-button").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".profile").removeClass("active");
+        });
+
+        $(".profile .profile-button").click(function () {
+          $(this).parent().toggleClass("active");
+          $(".notification").removeClass("active");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="/"><img src="{% static 'images/logo.png' %}" alt="logo" /></a>
+      </div>
+      <div class="nav-links">
+        <ul class="nav-buttons">
+          <li><a href="/">Home</a></li>
+          <li><a href="/evaluation">Evaluation</a></li>
+        </ul>
+      </div>
+      {% if user.role == "Student" or user.instructor.access_lvl == 1 or user.instructor.access_lvl == 2 %}
+        <div class="notification">
+          <div class="notif-button">
+            <img src="{% static 'images/notification.png' %}" alt="notif" />
+          </div>
+          <div class="notif-box">
+            <div class="notif-details">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      {% elif user.instructor.access_lvl == 1 or user.is_superuser %}
+        <div class="settings">
+          <a href="/settings" class="settings-button">
+            <img src="{% static 'images/icons/settings.png' %}" alt="settings" />
+          </a>
+        </div>
+      {% endif %}
+      <div class="profile">
+        <div class="profile-button">
+          <img src="{{ user.image.url }}" alt="pfp" />
+        </div>
+        <div class="profile-box">
+          <li><h1>{{ user.first_name }}</h1></li>
+          <li><a href="/profile/update">Edit Profile</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </div>
+      </div>
+    </div>
+    <div class="content">{% block content %} {% endblock %}</div>
+  </body>
+</html>

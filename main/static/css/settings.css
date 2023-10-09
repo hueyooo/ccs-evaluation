@@ -1,0 +1,19 @@
+.functions {
+  width: 1000px;
+  margin: auto;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.func-button {
+  padding: 10px;
+  overflow: auto;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: montserrat;
+}
+
+.func-button:hover {
+  background: #eee;
+}

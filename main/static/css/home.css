@@ -1,0 +1,221 @@
+.notif-desc img, .settings-desc img, .eval-desc img,
+.user-desc img, .logout-desc img{
+  height: 50px;
+  width: 50px;
+}
+
+.notif-desc, .settings-desc, .eval-desc,
+.user-desc, .logout-desc{
+  display: block;
+  text-align: right;
+  position: relative;
+}
+
+.content h1{
+  font-size: 20px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+.notification-box, .settings-box{
+  height: 500px;
+  width: 200px;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 10px;
+  align-self: end;
+  transition: 0.15s;
+}
+
+.notification-box::before {    
+  content: "";
+  background-image: url('../images/bg-images/notif-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+.settings-box::before {    
+  content: "";
+  background-image: url('../images/bg-images/sett-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+.evaluation-box{
+  height: 250px;
+  width: 500px;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-left: 20px;
+  align-self: end;
+  transition: 0.15s;
+}
+
+.evaluation-box::before {    
+  content: "";
+  background-image: url('../images/bg-images/eval-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+.evaluation-box{
+  height: 250px;
+  width: 500px;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-left: 20px;
+  align-self: end;
+  transition: 0.15s;
+}
+
+.evaluation-box::before {    
+  content: "";
+  background-image: url('../images/bg-images/eval-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+.vertical-horizontal{
+  display: flex;
+}
+
+.user-box{
+  height: 230px;
+  width: 240px;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  align-self: end;
+  transition: 0.15s;
+}
+
+.user-box::before {    
+  content: "";
+  background-image: url('../images/bg-images/user-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+.logout-box{
+  height: 230px;
+  width: 240px;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  align-self: end;
+  transition: 0.15s;
+}
+
+.logout-box::before {    
+  content: "";
+  background-image: url('../images/bg-images/logout-bg.jpg');
+  background-size: cover;
+  background-position: right;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+.notification-box:hover, .settings-box:hover, .evaluation-box:hover,
+.user-box:hover, .logout-box:hover{
+  box-shadow: 0 0 10px blue ;
+}
+
+.functions{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.calendar img{
+  height: 500px;
+}
+
+.calendar{
+  margin-left: auto;
+}
+
+@media (max-width:1400px) {
+  .content{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .calendar{
+    margin: auto;
+  }
+
+  .calendar img{
+    width: 720px;
+    height: auto;
+  }
+}
+
+@media (max-width:1025px) {
+  .notification-box, .settings-box, .evaluation-box,
+  .user-box, .logout-box{
+    height: 150px;
+    width: 35rem;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px 10px;
+    align-self: end;
+    transition: 0.15s;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  
+  .functions, .vertical-horizontal {
+    display: block;
+  }
+
+  .calendar img{
+    width: 560px;
+    height: auto;
+  }
+}
